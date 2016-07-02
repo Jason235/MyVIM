@@ -143,9 +143,9 @@ call vundle#end()
 
 " filetype plugin indent on
 
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
+"if !exists('g:airline_symbols')
+"	let g:airline_symbols = {}
+"endif
 let g:airline_powerline_fonts=1
 "let g:airline_left_sep="\u2b80"
 "let g:airline_left_alt_sep="\u2b81"
@@ -155,7 +155,6 @@ let g:airline_powerline_fonts=1
 "let g:airline_symbols.branch="\u2b60"
 "let g:airline_symbols.readonly="\u2b64"
 let g:airline_theme="luna"
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 "let g:airline#extensions#tabline#left_sep="\u2b80"
@@ -252,6 +251,48 @@ nmap <Leader>tp :tprevious<CR>
 " YCM
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jd :YcmCompleter GoToDefinition<CR>
+" YCM 不全菜单配色
+" 菜单
+highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
+" 选中项
+highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
+" 补全功能在注释中同样有效
+let g:ycm_complete_in_comments=1
+" 允许 vim 加载 .ycm_extra_conf.py 文件, 不在提示
+let g:ycm_confirm_extra_conf=0
+" 开启YCM 标签补全引擎
+let g:ycm_collect_identifiers_from_tags_files=1
+" 从第一个键入字符开始罗列匹配项
+let g:ycm_min_num_of_chars_for_completion=1
+" 禁止缓存匹配项，每次都重新生成匹配项
+let g:ycm_cache_omnifunc=0
+" 语法关键字补全
+let g:ycm_seed_identifiers_with_syntax=1
+
+" 接口生成
+" 成员函数的实现顺序与生成
+let g:protodefprotogetter="~/.vim/bundle/vim-protodef/pullproto.pl"
+" 成员函数实现与申明顺序一致
+let g:disable_protodef_sorting=1
+
+" 使用 NERDTree 插件查看工程文件。设置快捷键，速记: file list
+nmap <Leader>fl :NERDTreeToggle<CR>
+" 设置NERDTree子窗口宽度
+let NERDTreeWinSize=32
+" 设置NERDTree子窗口位置
+let NERDTreeWinPos="left"
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+" NERDTree 子窗口中不显示冗余帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应buffer
+let NERDTreeAutoDeleteBuffer=1
+
+" 显示/隐藏MiniBufExplorer 窗口
+map <Leader>bl :MBEToggle<CR>
+" buffer 切换快捷键
+map <C-Tab> :MBEbn<CR>
+map <C-S-Tab> :MBEbp<CR>
 
 filetype plugin indent on
 
