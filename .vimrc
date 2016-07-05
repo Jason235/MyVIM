@@ -78,7 +78,7 @@ colorscheme solarized
 " colorscheme molokai
 " colorscheme phd
 
-set guifont=Hack
+set guifont=Hack\ 12
 
 " 禁止光标闪烁
 set gcr=a:block-blinkon0
@@ -90,6 +90,8 @@ set guioptions-=R
 " 禁止显示菜单和工具条
 set guioptions-=m
 set guioptions-=T
+
+set guiheadroom=0
 
 " 基于缩进或者语法进行代码折叠
 " set foldmethod=indent
