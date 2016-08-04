@@ -86,3 +86,5 @@ source $ZSH/oh-my-zsh.sh
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
+
+set DOTNET_CLI_TELEMETRY_OPTOUT=1

@@ -141,7 +141,6 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rhysd/vim-clang-format'
-" Plugin 'ujihisa/ft-cmake'
 call vundle#end()
 
 
@@ -273,6 +272,9 @@ let g:ycm_cache_omnifunc=0
 " 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
 
+let g:ycm_global_ycm_extra_conf="~/.ycm_extra_conf.py"
+
+
 " 接口生成
 " 成员函数的实现顺序与生成
 let g:protodefprotogetter="~/.vim/bundle/vim-protodef/pullproto.pl"
@@ -315,6 +317,11 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 set autochdir
+
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+
+nnoremap <Leader>sp :CtrlSF<CR>
 
 filetype plugin indent on
 
