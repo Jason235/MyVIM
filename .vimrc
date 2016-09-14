@@ -1,4 +1,5 @@
 "定义快捷键的前缀 <Leader>
+set encoding=utf8
 let mapleader=";"
 
 " 开启文件类型侦测
@@ -74,11 +75,13 @@ set nowrap
 syntax enable
 syntax on
 set background=dark
-colorscheme solarized
-" colorscheme molokai
+" colorscheme solarized
+colorscheme molokai
 " colorscheme phd
 
-set guifont=Hack\ 12
+set guifont=Hack\ 11
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+" set guifont=Knack\ Regular\ Nerd\ Font\ Plus\ Font\ Awesome\ Plus\ Pomicons\ Mono\ 11
 
 " 禁止光标闪烁
 set gcr=a:block-blinkon0
@@ -133,6 +136,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'sjl/gundo.vim'
@@ -141,6 +146,8 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'tpope/vim-dispatch'
 call vundle#end()
 
 
