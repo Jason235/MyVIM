@@ -76,8 +76,8 @@ syntax enable
 syntax on
 set background=dark
 " colorscheme solarized
-colorscheme molokai
-" colorscheme phd
+" colorscheme molokai
+colorscheme phd
 
 set guifont=Hack\ 11
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
@@ -332,5 +332,5 @@ nnoremap <Leader>sp :CtrlSF<CR>
 
 filetype plugin indent on
 
-
-
+highlight Pmenu guibg=brown gui=bold
+highlight Pmenu ctermbg=238 gui=bold
